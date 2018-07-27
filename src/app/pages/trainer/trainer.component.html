@@ -1,0 +1,39 @@
+<app-botao></app-botao>
+
+<div class="row">
+	<form #login="ngForm" (ngSubmit)="onSubmit(login)" class="col l12">
+		<div class="row">
+			<div class="input-field col l4 m6 s12">
+				<input id="nome" type="text" name="usuario" ngModel required>
+				<label for="nome">Nome</label>
+			</div>
+			<div class="input-field col l4 m6 s12">
+				<input id="idade" type="text" name="idade" ngModel required>
+				<label for="idade">Idade</label>
+			</div>
+			<div class="input-field col l4 m6 s12">
+				<input id="numeroId" type="text" name="numeroId" ngModel required>
+				<label for="numeroId">Número de Identificação</label>
+			</div>
+			<div class="input-field col l4 m6 s12">
+				<input id="email" type="email" name="email" ngModel required>
+				<label for="email">E-mail</label>
+			</div>
+			<div class="input-field col l4 m6 s12">
+				<input id="regiaoInicio" type="text" name="regiaoInicio" ngModel required>
+				<label for="regiaoInicio">Região de Início</label>
+			</div>
+			<div class="input-field col l4 m6 s12">
+				<input id="pokemonInicio" type="text" name="pokemonInicio" ngModel required>
+				<label for="pokemonInicio">Pokémon Inicial</label>
+			</div>
+			<div class="input-field col l4 m6 s12">
+				<input id="outrasReg" type="text" name="outrasReg" ngModel required>
+				<label for="outrasReg">Outras regiões</label>
+			</div>
+		</div>
+		<div class="row">
+			<button class="waves-effect waves-light btn" type="submit">LOGIN</button>
+		</div>
+	</form>
+</div>
