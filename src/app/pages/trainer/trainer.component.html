@@ -6,18 +6,25 @@
 				<label for="usuario">Usuário</label>
 			</div>
 			<div class="input-field col l6">
-				<input id="senha" type="password" name="senha" ngModel required #senha="ngModel" (blur)="checkPassword(senha)">
-				<label for="senha">Senha</label>
+				<input id="pokemon" type="text" name="pokemon" ngModel required #pokemon="ngModel" (blur)="checkPokemon(pokemon)">
+				<label for="pokemon">Senha</label>
 			</div>
 		</div>
-		<div *ngIf="passwordError && senha.touched">
+		<!--<div *ngIf="passwordError && senha.touched">
 			<p>Senha inválida.</p>
 		</div>
 		<div *ngIf="(usuario.invalid && usuario.touched) || (senha.invalid && senha.touched)">
 			<p>Campo(s) obrigatório(s).</p>
-		</div>
+		</div>-->
 		<div class="row">
-			<button class="waves-effect waves-light btn" type="submit" [disabled]="login.invalid || passwordError">LOGIN</button>
+			<button class="waves-effect waves-light btn" type="submit">LOGIN</button>
 		</div>
 	</form>
+	<img [src]="pokemons.sprites.front_default">
 </div>
+
+<!-- <div class="card small center">
+	<div class="card-content white-text">
+		<span class="name card-title">fndsfsdgfsdbgfs</span>
+		<img src={{pokemon.sprites.front_default}}>
+</div> -->

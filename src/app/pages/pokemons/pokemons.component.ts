@@ -18,16 +18,4 @@ export class PokemonsComponent implements OnInit {
   	ngOnInit() {
 
   	}
-
-	getPokemon(){
-		console.log("Entrei na função")
-  		this.id++;
-    	this.pkmnService.getPokemon(this.id)
-    	.subscribe(
-    		(res)=>{
-          		this.pokemons.push(res); 
-          		console.log(res);
-        	}
-      	)
-  	}
 }

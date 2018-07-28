@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PokemonService } from '../../services/pokemon/pokemon.service';
 
 @Component({
   selector: 'app-trainer',
@@ -7,23 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TrainerComponent implements OnInit {
 
+	pokemons;
 	passwordError: boolean = false;
 
-  constructor() { }
+	constructor(public pokemonservice: PokemonService) { }
 
-  ngOnInit() {
-  }
+	ngOnInit() {
+	}
 
-  onSubmit(login) {
-  	console.log(login);
-  }
+	onSubmit(login) {
+		console.log(login);
+	}
 
-  checkPassword(senha) {
-  	console.log(this.passwordError);
-  	if(senha.value.length != 6)
-  		this.passwordError = true;
-  	else
-  		this.passwordError = false;
-  }
-
+	checkPokemon(pokemon) {
+		console.log(this.passwordError);
+		this.pokemonservice.checkPokemon(pokemon.value).subscribe((res)=>{
+			/*console.log(res.sprites.front_default);*/
+			this.pokemons = res;
+			console.log(res);
+			console.log(this.pokemons);
+		});
+	}
 }

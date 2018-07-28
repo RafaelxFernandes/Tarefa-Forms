@@ -15,7 +15,7 @@ export class PokemonService {
     console.log('Hello Pokemon Service');
   }
 
-  getPokemon(id):Observable<any>{
-    return this.http.get(this.pokeApiUrl + 'pokemon/' + id).map(res => res);
+  checkPokemon(pokemon):Observable<any>{
+    return this.http.get(this.pokeApiUrl + 'pokemon/' + pokemon).map(res => res);
   }
 }

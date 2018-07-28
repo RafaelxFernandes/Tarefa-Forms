@@ -12,8 +12,9 @@ import { AppRoutingModule } from './app.routing.module'
 import { HttpClientModule } from '@angular/common/http'; //Importar para a service funcionar
 import { PokemonService } from './services/pokemon/pokemon.service'; //Importar para a service funcionar
 
-import { FormsModule } from '@angular/forms';
-import { TrainerComponent } from './pages/trainer/trainer.component'; //Importar para ngForm funcionar
+import { FormsModule } from '@angular/forms'; //Importar para ngForm funcionar
+import { TrainerComponent } from './pages/trainer/trainer.component';
+import { BotaoComponent } from './pages/trainer/botao/botao.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { TrainerComponent } from './pages/trainer/trainer.component'; //Importar
     HomeComponent,
     BerriesComponent,
     TrainerComponent,
+    BotaoComponent,
   ],
   imports: [
     BrowserModule,
