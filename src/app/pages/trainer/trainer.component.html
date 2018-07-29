@@ -1,30 +1,12 @@
-<div class="row">
-	<form #login="ngForm" (ngSubmit)="onSubmit(login)" class="col l12">
-		<div class="row">
-			<div class="input-field col l6">
-				<input id="usuario" type="text" name="usuario" ngModel required #usuario="ngModel">
-				<label for="usuario">Usuário</label>
-			</div>
-			<div class="input-field col l6">
-				<input id="pokemon" type="text" name="pokemon" ngModel required #pokemon="ngModel" (blur)="checkPokemon(pokemon)">
-				<label for="pokemon">Senha</label>
-			</div>
-		</div>
-		<!--<div *ngIf="passwordError && senha.touched">
-			<p>Senha inválida.</p>
-		</div>
-		<div *ngIf="(usuario.invalid && usuario.touched) || (senha.invalid && senha.touched)">
-			<p>Campo(s) obrigatório(s).</p>
-		</div>-->
-		<div class="row">
-			<button class="waves-effect waves-light btn" type="submit">LOGIN</button>
-		</div>
-	</form>
-	<img [src]="pokemons.sprites.front_default">
+<div class="center-align">
+	<img src="https://vignette.wikia.nocookie.net/pokemon/images/b/be/Professor_Juniper.png/revision/latest?cb=20160116125611">
+	<div class="row">
+		<strong>BEM-VINDO AO MUNDO POKÉMON!</strong>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu ante pretium, pellentesque magna sit amet, feugiat est. Proin sit amet viverra lectus. Duis eu odio ut lacus posuere consectetur. Pellentesque euismod rhoncus elementum. Suspendisse eu libero vel elit viverra efficitur nec ac neque. Pellentesque est est, auctor at volutpat quis, pretium eget quam. Cras varius, risus eget ultrices mattis, ligula magna dapibus dui, sit amet auctor felis odio ut sapien. Duis dui justo, luctus ac placerat eu, vehicula quis nunc. Praesent a lectus gravida, fringilla urna nec, efficitur dolor. Prttitor vulputate. Praesent sapien lorem, efficitur non nisi et, tempor auctor leo.
+		</p>
+	</div>
+	<div class="row">
+		<app-botao></app-botao>
+	</div>
 </div>
-
-<!-- <div class="card small center">
-	<div class="card-content white-text">
-		<span class="name card-title">fndsfsdgfsdbgfs</span>
-		<img src={{pokemon.sprites.front_default}}>
-</div> -->
